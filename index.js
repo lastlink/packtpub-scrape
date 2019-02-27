@@ -24,6 +24,8 @@ async function run() {
     const browser = await puppeteer.launch({
         headless: config.headless,
         args: ["--ash-host-window-bounds=1920x1080", "--window-size=1920,1080", "--window-position=0,0"]
+        // slowMo:10,
+
     });
 
     const page = await browser.newPage();
@@ -75,14 +77,15 @@ async function run() {
 
     await page.goto('https://www.packtpub.com/packt/offers/free-learning');
 
-    await page.waitFor(2000);
+    // await page.waitFor(2000);
 
     // await page.waitFor(500);
     // await page.waitForNavigation({ waitUntil: 'networkidle0' });
 
-    await page.evaluate(() => {
-        document.querySelector("#fl-claim-btn").click()
-    })
+    // will fail b/c of recaptcha manually click instead
+    // await page.evaluate(() => {
+    //     document.querySelector("#fl-claim-btn").click()
+    // })
 
 }
 
