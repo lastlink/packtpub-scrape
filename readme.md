@@ -12,4 +12,4 @@ based on https://github.com/niqdev/packtpub-crawler
 * installed nodejs
 * `npm install`
 * `cp config/creds.template.js config/creds.js`
-* `npm start`
+* `npm start` or press F5 to run vscode debugger
