@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+mainconfig.js
+
+output
+config/creds.js
